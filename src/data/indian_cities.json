@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Mumbai",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "MH",
+    "type": "city",
+    "latitude": "19.0760",
+    "longitude": "72.8777"
+  },
+  {
+    "id": 2,
+    "name": "Pune",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "MH",
+    "type": "city",
+    "latitude": "18.5204",
+    "longitude": "73.8567"
+  },
+  {
+    "id": 3,
+    "name": "Nagpur",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "MH",
+    "type": "city",
+    "latitude": "21.1458",
+    "longitude": "79.0882"
+  },
+  {
+    "id": 4,
+    "name": "Bengaluru",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "KA",
+    "type": "city",
+    "latitude": "12.9716",
+    "longitude": "77.5946"
+  },
+  {
+    "id": 5,
+    "name": "Mysuru",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "KA",
+    "type": "city",
+    "latitude": "12.2958",
+    "longitude": "76.6394"
+  },
+  {
+    "id": 6,
+    "name": "Chennai",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "TN",
+    "type": "city",
+    "latitude": "13.0827",
+    "longitude": "80.2707"
+  },
+  {
+    "id": 7,
+    "name": "Coimbatore",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "TN",
+    "type": "city",
+    "latitude": "11.0168",
+    "longitude": "76.9558"
+  },
+  {
+    "id": 8,
+    "name": "Delhi",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "DL",
+    "type": "city",
+    "latitude": "28.7041",
+    "longitude": "77.1025"
+  },
+  {
+    "id": 9,
+    "name": "Noida",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "UP",
+    "type": "city",
+    "latitude": "28.5355",
+    "longitude": "77.3910"
+  },
+  {
+    "id": 10,
+    "name": "Lucknow",
+    "country_id": 101,
+    "country_code": "IN",
+    "country_name": "India",
+    "state_code": "UP",
+    "type": "city",
+    "latitude": "26.8467",
+    "longitude": "80.9462"
+  }
+]

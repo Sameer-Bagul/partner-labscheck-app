@@ -1,0 +1,31 @@
+export interface Lab {
+  id: string;
+  name: string;
+  franchiseId: number;
+  address: string;
+  googlePlaceId: string;
+  workingHours: string;
+  reviews: number;
+  rating: number;
+  latitude: number;
+  longitude: number;
+  pincode: number;
+  locality: string;
+  city: string;
+  state: string;
+  country: string;
+  website: string;
+  franchiseWebsite: string;
+  phoneNo: number;
+  directionsUri: string;
+  placeUri: string;
+  photosUri: string[];
+  status: string;
+  localityCityId: number;
+  registrationNo: string | null;
+  email: string | null;
+  createdDate: string;
+  lastModifiedDate: string;
+  createdBy: string;
+  lastModifiedBy: string;
+}

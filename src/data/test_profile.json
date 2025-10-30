@@ -1,0 +1,86 @@
+[
+  {
+    "profile_name": "Lipid Profile",
+    "description": "A panel of blood tests used to evaluate lipid levels and assess cardiovascular risk.",
+    "age_group": "All",
+    "profile_cost": 400,
+    "parameters": [
+      {
+        "name": "Total Cholesterol",
+        "parameter_cost": 100
+      },
+      {
+        "name": "HDL Cholesterol",
+        "parameter_cost": 80
+      },
+      {
+        "name": "LDL Cholesterol",
+        "parameter_cost": 90
+      },
+      {
+        "name": "Triglycerides",
+        "parameter_cost": 90
+      },
+      {
+        "name": "VLDL Cholesterol",
+        "parameter_cost": 40
+      }
+    ]
+  },
+  {
+    "profile_name": "Liver Function Test (LFT)",
+    "description": "Measures enzymes, proteins, and substances produced by the liver to assess its health.",
+    "age_group": "All",
+    "profile_cost": 600,
+    "parameters": [
+      {
+        "name": "ALT (SGPT)",
+        "parameter_cost": 100
+      },
+      {
+        "name": "AST (SGOT)",
+        "parameter_cost": 100
+      },
+      {
+        "name": "Total Bilirubin",
+        "parameter_cost": 80
+      },
+      {
+        "name": "Direct Bilirubin",
+        "parameter_cost": 80
+      },
+      {
+        "name": "Alkaline Phosphatase",
+        "parameter_cost": 120
+      },
+      {
+        "name": "Total Protein",
+        "parameter_cost": 60
+      },
+      {
+        "name": "Albumin/Globulin Ratio",
+        "parameter_cost": 60
+      }
+    ]
+  },
+  {
+    "profile_name": "Thyroid Profile",
+    "description": "A set of tests to evaluate thyroid gland function and hormone levels.",
+    "age_group": "All",
+    "profile_cost": 350,
+    "parameters": [
+      {
+        "name": "TSH (Thyroid Stimulating Hormone)",
+        "parameter_cost": 120
+      },
+      {
+        "name": "T3 (Triiodothyronine)",
+        "parameter_cost": 100
+      },
+      {
+        "name": "T4 (Thyroxine)",
+        "parameter_cost": 130
+      }
+    ]
+  }
+]

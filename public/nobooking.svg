@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#2C3549;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{stroke:#000007;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#48ACF2;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#2C3549;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#2C3549;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M103.2-10.1"/>
+<path class="st1" d="M81.3,42.5c0,0,0.1,0.1,0.1,0.1C81.4,42.6,81.4,42.6,81.3,42.5z"/>
+<path class="st1" d="M80.9,42.3c0,0,0.1,0,0.1,0.1C80.9,42.4,80.9,42.3,80.9,42.3z"/>
+<path class="st1" d="M81.5,42.7c0.1,0.1,0.2,0.2,0.2,0.3C81.6,42.8,81.6,42.7,81.5,42.7z"/>
+<path class="st1" d="M81,42.4c0.1,0,0.2,0.1,0.3,0.2C81.2,42.5,81.1,42.4,81,42.4z"/>
+<circle class="st2" cx="52.2" cy="25.3" r="15"/>
+<line class="st2" x1="67.2" y1="10.3" x2="37.8" y2="39.7"/>
+<line class="st3" x1="27.8" y1="47.5" x2="49.6" y2="51.5"/>
+<polyline class="st4" points="32.6,41.5 23.3,45.1 23.3,84 54.7,92.1 54.7,51.7 81.4,42.9 71.6,40.9 "/>
+<polyline class="st4" points="54.7,92.1 79.5,83.5 79.5,64 "/>
+<polyline class="st3" points="22.1,45.1 9.1,55.8 19.1,51.7 "/>
+<polyline class="st3" points="82,42.6 90.9,58.3 65,68.3 58.6,59.1 "/>
+</svg>

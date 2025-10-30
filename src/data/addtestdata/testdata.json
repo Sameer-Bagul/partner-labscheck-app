@@ -1,0 +1,50 @@
+[
+  {
+  "id": 1,
+  "name": "CBC Test",
+   "city": [
+    { "id": "1", "name": "Mumbai", "state": "Maharashtra" },
+    { "id": "2", "name": "Thane", "state": "Maharashtra" }
+  ],
+  "cost": 400,
+  "parameter": [
+
+ { "id": "bp", "label": "Blood Pressure" },
+
+    { "id": "weight", "label": "Weight" },
+    { "id": "height", "label": "Height" }
+  ]
+},
+
+  {
+    "id": 2,
+    "name": "Lipid Profile",
+      "city": [
+    { "id": "1", "name": "pune", "state": "Maharashtra" },
+    { "id": "2", "name": "Thane", "state": "Maharashtra" }
+  ],
+ "parameter": [
+  { "id": "bp", "label": "Blood Pressure" },
+ 
+    { "id": "height", "label": "Height" }
+  ],
+    "cost": 600
+  },
+
+  {
+  "id": 3,
+  "name": "Thyroid Panel",
+   "city": [
+    { "id": "1", "name": "Satara", "state": "Maharashtra" },
+    { "id": "2", "name": "Pune", "state": "Maharashtra" }
+  ],
+  "cost": 500,
+  "parameter": [
+   { "id": "bp", "label": "Blood Pressure" },
+ 
+    { "id": "weight", "label": "Weight" },
+    { "id": "height", "label": "Height" }
+  ]
+}
+
+]
