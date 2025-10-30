@@ -7,17 +7,52 @@ import { yearsToDays } from 'date-fns';
 // Regex to match static files
 const PUBLIC_FILE = /\.(webp|png|jpg|jpeg|gif|svg|ico|txt|css|js)$/;
 
+function addCORSHeaders(response: NextResponse, origin: string | null) {
+  if (origin) {
+    const isAllowedOrigin = 
+      origin.includes('localhost') ||
+      origin.includes('127.0.0.1') ||
+      origin.startsWith('exp://') ||
+      origin.includes('.repl.co') ||
+      origin === 'https://partner.labscheck.com';
+
+    if (isAllowedOrigin) {
+      response.headers.set('Access-Control-Allow-Origin', origin);
+    }
+  } else {
+    response.headers.set('Access-Control-Allow-Origin', '*');
+  }
+  
+  response.headers.set('Access-Control-Allow-Credentials', 'true');
+  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Date, X-Api-Version');
+  return response;
+}
+
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  // Bypass static files, Next.js assets, and API routes
+  const origin = request.headers.get('origin');
+
+  // Handle OPTIONS preflight requests for API routes
+  if (request.method === 'OPTIONS' && pathname.startsWith('/api')) {
+    const response = new NextResponse(null, { status: 204 });
+    return addCORSHeaders(response, origin);
+  }
+
+  // Bypass static files, Next.js assets
   if (
     pathname.startsWith('/_next') ||
-    pathname.startsWith('/api') ||
     pathname === '/favicon.ico' ||
     pathname === '/robots.txt' ||
     PUBLIC_FILE.test(pathname)
   ) {
     return NextResponse.next();
+  }
+
+  // Add CORS headers to API routes
+  if (pathname.startsWith('/api')) {
+    const response = NextResponse.next();
+    return addCORSHeaders(response, origin);
   }
 
   // Skip middleware for public routes
