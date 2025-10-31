@@ -1,18 +1,15 @@
 # Libraries to Install Before Running the LabsCheck Mobile App
 
-## Installation Command
+## Quick Installation
 
-Run this command in the `latest-app` directory:
-
-```bash
-npm install axios zustand expo-secure-store @tanstack/react-query nativewind tailwindcss react-hook-form @hookform/resolvers zod clsx expo-image
-```
-
-## Additional Dev Dependencies
+All dependencies are already listed in `package.json`. Simply run:
 
 ```bash
-npm install --save-dev @types/react react-native-worklets
+cd latest-app
+npm install
 ```
+
+That's it! All required libraries will be installed automatically.
 
 ## Required Libraries Breakdown:
 

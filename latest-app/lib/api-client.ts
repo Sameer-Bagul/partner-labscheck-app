@@ -1,14 +1,13 @@
 import axios from 'axios';
 import * as SecureStore from 'expo-secure-store';
-
-const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'https://labscheck.com/backendapi';
+import { env } from '@/config/env';
 
 const apiClient = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: env.api.baseUrl,
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout: 30000,
+  timeout: env.api.timeout,
   withCredentials: true,
 });
 
@@ -39,4 +38,3 @@ apiClient.interceptors.response.use(
 );
 
 export default apiClient;
-export { API_BASE_URL };

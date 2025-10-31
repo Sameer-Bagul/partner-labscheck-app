@@ -8,28 +8,34 @@ This project contains both the **Next.js backend API** and the **React Native mo
 
 ```
 .
-├── mobile/                 # React Native mobile app (Expo)
-│   ├── app/               # Expo Router pages
-│   │   ├── (auth)/       # Authentication screens
-│   │   ├── (dashboard)/  # Dashboard screens
-│   │   ├── _layout.tsx   # Root layout
-│   │   └── index.tsx     # Landing screen
-│   ├── components/       # Reusable components
-│   ├── lib/              # API client & utilities
-│   ├── store/            # Zustand state management
-│   ├── config/           # Configuration
-│   └── package.json      # Mobile app dependencies
+├── latest-app/            # NEW React Native mobile app (Expo) ⭐
+│   ├── app/              # Expo Router pages
+│   │   ├── (dashboard)/ # Dashboard screens (home, labs, bookings, etc.)
+│   │   ├── auth/        # Authentication screens
+│   │   ├── _layout.tsx  # Root layout with auth guards
+│   │   └── index.tsx    # Landing screen
+│   ├── components/      # Reusable UI components
+│   │   └── ui/         # Button, Input, Card, etc.
+│   ├── lib/            # API client & utilities
+│   ├── store/          # Zustand state management
+│   ├── hooks/          # React Query hooks for data fetching
+│   ├── config/         # Environment configuration
+│   ├── validations/    # Zod schemas
+│   ├── .env           # Environment variables
+│   └── package.json   # Mobile app dependencies
 │
-├── src/                   # Next.js backend API
-│   ├── app/              # Next.js app router
-│   │   ├── api/         # API routes
-│   │   ├── (auth)/      # Auth pages (web)
+├── mobile/              # OLD mobile app (archived)
+│
+├── src/                 # Next.js backend API
+│   ├── app/            # Next.js app router
+│   │   ├── api/       # API routes
+│   │   ├── (auth)/    # Auth pages (web)
 │   │   └── (dashboard)/ # Dashboard pages (web)
-│   ├── components/       # React components
-│   ├── lib/              # Utilities
-│   └── hooks/            # Custom hooks
+│   ├── components/     # React components
+│   ├── lib/            # Utilities
+│   └── hooks/          # Custom hooks
 │
-└── package.json          # Backend dependencies
+└── package.json        # Backend dependencies
 ```
 
 ## Technology Stack
@@ -105,11 +111,18 @@ npm run web      # Web browser
 ```
 
 **Environment Configuration**:
-The mobile app's API base URL is configured via the `.env` file. By default, it connects to `https://labscheck.com/backendapi`. You can change this to point to your Replit backend by editing `mobile/.env`:
+The mobile app uses centralized environment configuration. See `latest-app/ENV_VARIABLES_SUMMARY.md` for complete details.
 
+Required variables in `latest-app/.env`:
+```bash
+EXPO_PUBLIC_API_BASE_URL=https://labscheck.com/backendapi
+EXPO_PUBLIC_APP_URL=https://partner.labscheck.com
+EXPO_PUBLIC_GOOGLE_MAPS_API_KEY=
+EXPO_PUBLIC_RAZORPAY_KEY_ID=rzp_test_RQ8X0oYv8KbTkc
+EXPO_PUBLIC_GOOGLE_CLIENT_ID=528104107190-l0l2ci8r8uoeimitt699ob7prj345jf2.apps.googleusercontent.com
 ```
-EXPO_PUBLIC_API_URL=https://your-replit-url.repl.co/api
-```
+
+Note: Mobile apps use different variables than the Next.js web app. See variable mapping in `ENV_VARIABLES_SUMMARY.md`.
 
 ## Architecture & Design Decisions
 
