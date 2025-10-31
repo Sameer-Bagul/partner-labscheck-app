@@ -4,11 +4,10 @@
     "slug": "labscheck-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#7B2CBF"
     },
@@ -18,7 +17,6 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#7B2CBF"
       },
       "package": "com.labscheck.partner",
@@ -29,14 +27,14 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
     "plugins": [
       "expo-router",
       [
         "expo-secure-store"
-      ]
+      ],
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true
