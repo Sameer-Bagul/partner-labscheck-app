@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import * as SecureStore from 'expo-secure-store';
+import apiClient from '../lib/api-client';
 import { User } from '../types';
 
 interface AuthState {
@@ -39,12 +40,37 @@ export const useAuthStore = create<AuthState>((set) => ({
     try {
       const token = await SecureStore.getItemAsync('auth_token');
       if (token) {
-        set({ token, isLoading: false });
+        set({ token });
+        
+        try {
+          const response = await apiClient.get('/auth/me');
+          const user = response.data.user || response.data;
+          set({ 
+            user, 
+            isAuthenticated: true, 
+            isLoading: false 
+          });
+        } catch (error) {
+          console.error('Failed to fetch user:', error);
+          await SecureStore.deleteItemAsync('auth_token');
+          set({ 
+            user: null, 
+            token: null, 
+            isAuthenticated: false, 
+            isLoading: false 
+          });
+        }
       } else {
-        set({ isLoading: false });
+        set({ isLoading: false, isAuthenticated: false });
       }
     } catch (error) {
-      set({ isLoading: false });
+      console.error('Auth check failed:', error);
+      set({ 
+        user: null, 
+        token: null, 
+        isAuthenticated: false, 
+        isLoading: false 
+      });
     }
   },
 }));

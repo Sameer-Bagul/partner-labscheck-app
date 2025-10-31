@@ -1,8 +1,20 @@
-import { Tabs } from 'expo-router';
+import { Tabs, Redirect } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/constants/theme';
+import { useAuthStore } from '@/store/auth';
+import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 
 export default function DashboardLayout() {
+  const { isAuthenticated, isLoading } = useAuthStore();
+
+  if (isLoading) {
+    return <LoadingSpinner message="Loading..." />;
+  }
+
+  if (!isAuthenticated) {
+    return <Redirect href="/" />;
+  }
+
   return (
     <Tabs
       screenOptions={{

@@ -1,9 +1,9 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text } from 'react-native';
 import { useRouter } from 'expo-router';
-import { LinearGradient } from 'expo-linear-gradient';
 import { Button } from '@/components/ui/Button';
 import { useAuthStore } from '@/store/auth';
 import { useEffect } from 'react';
+import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 
 export default function Index() {
   const router = useRouter();
@@ -14,6 +14,14 @@ export default function Index() {
       router.replace('/(dashboard)/home');
     }
   }, [isAuthenticated, isLoading]);
+
+  if (isLoading) {
+    return <LoadingSpinner message="Loading..." />;
+  }
+
+  if (isAuthenticated) {
+    return <LoadingSpinner message="Redirecting..." />;
+  }
 
   return (
     <View className="flex-1 bg-brand-500">
@@ -39,7 +47,7 @@ export default function Index() {
             onPress={() => router.push('/auth/signin')}
             variant="primary"
             fullWidth
-            className="bg-white"
+            className="bg-white mb-4"
           >
             <Text className="text-brand-500 text-lg font-semibold">Sign In</Text>
           </Button>
